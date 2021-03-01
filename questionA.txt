@@ -1,0 +1,22 @@
+
+
+
+CREATE TABLE cities (
+id string(255) PRIMARY KEY,
+cityName string(255),
+altitude string(255),
+langtude string(255) 
+);
+
+
+
+CREATE TABLE word_contries (
+id string(255) PRIMARY KEY,
+isoCode3 string(255) NOT NULL,
+isoCode2 string(255) NOT NULL,
+countryName string(255) NOT NULL,
+capital cityId NOT NULL FORIGN KEY REFRENCES cities(Id),
+countryDialingCode string(255) NOT NULL
+
+);
+

@@ -1,0 +1,10 @@
+package com.ilaBank.DEVTESAPI;
+
+@RunWith(Cucumber.class)
+@CucmberOptions(
+		features='src/test/resources/Test',
+		)
+
+public class Junit {
+
+}

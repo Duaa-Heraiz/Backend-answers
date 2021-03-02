@@ -1,0 +1,12 @@
+Feature: Tests for ToolsQA's DEV-TES-API API 
+Description: the purpose of these test is to display the city's alitiude and langtude.
+
+cities URL : http/localhots:8080/api/city/get-cities 
+
+Background: User ask for city's langtude and altitude 
+Given enter city's langtude & altitude
+
+Scenario: User able to display the city's information
+Given a list of cities
+When user choose city
+Then city diplayed with details 

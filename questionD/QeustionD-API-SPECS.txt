@@ -1,0 +1,65 @@
+paths: localhot:8080/api/cities/get-cities 
+
+get:
+summary: get citites altitude and langtude
+resposes: 
+'200'
+content:
+   'application/json'
+         schema:   
+         $ref:'#/component/schemas/CitiesInquiryResponse'
+       description: OK
+
+
+'400'
+content:
+  'application/json'
+        schema:
+         $ref:'#/component/schemas/ApiError'
+         description: No Result Found
+
+
+'500'
+content:
+  'application/json'
+    schema:
+          $ref:'#/component/schemas/ApiError'
+     description:Internal Server Error
+
+
+properities:
+
+langtude:
+type:String
+example:55
+description: city's langtude
+
+
+altitude:
+type:String
+example:70
+description: city's altitude
+
+
+cities:
+type: array
+items:
+$ref:'#components/schemas/cities'
+
+
+citiesInquiryResponseData:
+type:object
+properties:
+cities:
+$ref:'#components/schemas/Meta'
+
+
+
+
+citiesInquiryResponse:
+type:object
+properties:
+meta:
+$ref:'#components/schemas/Meta'
+data:
+$ref:'#components/schemas/citiesInquiryResponseData'
